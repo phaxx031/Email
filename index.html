@@ -1,33 +1,122 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+ <!--The use of boilerplate was very helpful in having an empty template to start however it did not include the link to normalize which I had to manually put
+  in. In general I am comfortable editing from an empty boilerplate html template onwards and as this assignment progresses, I'm learning more and more and
+  becoming increasingly confident in creating a website-->
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Email</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xengpha.com</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
+  <header>
+
+    <h1>Xeng Ying Pha</h1>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!--Referred back to previous examples in the lesson to edit image size-->
+  </header>
+
   <main>
-    <section>
-    <div class="group">
-    <div class="item-double">
-        <form action="#" method="POST">
-        <label for="user-name">Name:</label>
-        <input id="user-name" type="text" name="name">
+    <section class ="text-centered">
+      <h2 class="lightbrown-headerbackground">About Me</h2>
+      <h3>I am who I am</h3>
+      <img src="xeng-pha-picture.jpg" alt="Xeng Pha">
+      <p>Hey all, my name is Xeng. I'm located in Minneapolis, Minnesota, USA. I'm very excited about what the future holds. 
+        Thank you for visiting my page. I wanted to get into web development to build a tool that can change the mental health world which would simplifying the search for resources and
+        application process for support(s). I'm super excited to see who I meet along the way and discover how we can help eachother. As a licensed mental health
+        practitioner, I understand the importance for human connection in teamwork and thus am looking forward to building strong bonds with my teammates.
+        Three unique assets I bring to a team are imagination, curiosity, and passion.</p>
+      <p>I like to believe I'm a pretty normal person. For you to get the know me better, let me share some information about me in the next 
+        two sections below.</p> 
+
+      <hr>
+      
+      <section>
+      <h3>The following are some of my hobbies in my spare time:</h3>
+      <ul>
+        <li>Hanging out with my little brother</li>
+        <li>Video games</li>
+        <li>Exercising</li>
+        <li>Planning my next getaway!</li>
+      </ul>
+      <img src="x-chenku.jpg" width="667" alt="Xeng and his little brother">
+      <img src="x-raft.JPG" width="1000" alt="Xeng rafting in Colorado">
+      </section>
+
+      <hr>
+
+      <h3>My favorite movies of all time(in order):</h3>
+      <ol>
+        <li>The Dark Knight</li>
+        <li>The Avengers</li>
+        <li>My Name is Khan</li>
+        <li>Inception</li>
+      </ol>
+    </section>
+    <!--Claudio and I went over the formatting/indenting for the section above, indenting means the indented code is within the previous code. 
+    So for example h2 ends on line 30 it does not go onto 31 necessarily so <p> within it is a sibling/same level as h2 on line 30. 
+    The li directly belong to ul and ol which is why they are indented. Of course h2 and p, etc fits into main and section so they are indented.
+    Also for <p> when I hit enter, i do not need to use tab after I've hit enter to put it into a lower line.-->
   
-        <label for="user-email">Email:</label>
-        <input id="user-email" type="text" name="email">
-  
-        <label for="user-message">Message:</label>
-        <textarea id="user-message" name="message"></textarea>
-        <button type="submit">Submit</button>
-        </form>
-    </div>
-    </div>
+    <section class="text-centered">
+      <h2 class="lightbrown-headerbackground">Mental Health Resources</h2>
+      <div class="group item">
+      <div class="text-centered">
+      <img src="coming-soon.png" alt="Coming Soon Image">
+      </div>
+      <h3>yourhealth.com</h3>
+      <p>Stay tuned for the worldwide launch of a website that will simplify your search for mental health services and application(s) 
+        for social resources!</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="text-centered">
+      <article>
+      <h3>Also please keep up with current events through my channel!</h3>
+      <a href="https://tyt.com/" target="_blank">TYT.com</a>
+      <!--Claudio suggests putting width into CSS not HTML file which makes sense since it is visual and cosmetic-->
+      </article>
     </section>
   </main>
+
+  <footer class="text-centered">
+    <section class="lightbrown-headerbackground">
+      <h2>Contact</h2>
+      </section>
+      <p>Feel free to connect with me through email and social media at the following links:</p>
+      <form action="https://formspree.io/phaxx031@umn.edu" method="post">
+
+        <label for="user-name">Name:</label>
+        <input id="user-name" type="text" name="name">
+
+        <label for="user-email">Email:</label>
+        <input id="user-email" type="text" name="email">
+
+        <label for="form-message">Your message:</label>
+        <textarea id="form-message" name="message" autofocus="on" required maxlength="200"></textarea>
+      <div class="text-centered">
+        <button type="submit">Submit</button>
+      </div>
+      </form>
+
+      <p>phaxx031@umn.edu</p>
+      <!--I personally prefer it when links open up in tabs as opposed to a new window thus I used the target="_blank" to make that happen-->
+      <a href="https://www.linkedin.com/in/xeng-pha/" target="_blank"> <img src="linkedin-logo.png" width="150" alt="LinkedIn Logo"></a>
+      <a href="http://www.github.com/phaxx031" target="_blank"> <img src="github-logo.png" width="150" alt="Github Logo"></a>
+      <!--Claudio suggests putting width into CSS not HTML file which makes sense since it is visual and cosmetic-->
+  </footer>
 </body>
 
 </html>
